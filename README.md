@@ -10,6 +10,8 @@ Five models (model A-E) will be considered.
 
 See Ogita et al. 2022[1] for details.
 
+The script for Bayesian force inference is [here] (https://github.com/IshiharaLab/BayesianForceInference).
+
 ## Requirement
 
 * statsmodels 0.12.2
