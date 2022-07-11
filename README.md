@@ -29,4 +29,6 @@ The script for Bayesian force inference can be found [here](https://github.com/I
 
 ## Reference
 
-1. Goshi Ogita, Takefumi Kondo, Keisuke Ikawa, Tadashi Uemura, Shuji Ishihara & Kaoru Sugimura (2022)<br>"Image based parameter inference for epithelial mechanics"
+1. Goshi Ogita, Takefumi Kondo, Keisuke Ikawa, Tadashi Uemura, Shuji Ishihara & Kaoru Sugimura (2022)<br>
+"Image based parameter inference for epithelial mechanics"<br>
+PLoS Comput Biol 18(6): e1010209. [https://doi.org/10.1371/journal.pcbi.1010209](https://doi.org/10.1371/journal.pcbi.1010209)
