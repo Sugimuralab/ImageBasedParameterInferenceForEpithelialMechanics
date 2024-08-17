@@ -3,11 +3,7 @@ Parameter estimation and model selection for epithelial mechanics
 
 ## Description
 
-This is a script for parameter esitmation and model selection for epithelial mechanics, proposed in Ogita et al. 2022 [1]. 
-
-The most predictive tension model of cell jucntions and its model parameter will be obtained from the cell geometry data of epithelial tissue.
-Five models (model A-E) will be considered.
-
+Image-basde parameter inference has been reported in Ogita et al. 2022 [1]. It estimates parameters of the Cell Vertex Model (CVM) and selects the most predictive model among tested from image data of epithelial tissue.
 See Ogita et al. 2022[1] for details.
 
 The script for Bayesian force inference can be found [here](https://github.com/IshiharaLab/BayesianForceInference).
