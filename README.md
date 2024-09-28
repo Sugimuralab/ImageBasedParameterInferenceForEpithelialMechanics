@@ -19,9 +19,6 @@ The script for Bayesian force inference can be found [here](https://github.com/I
 2. Change the variable "filename" in ParameterEstimation.py to the input file in step 1.
 3. Run ParameterEstimation.py on IDE or IPython.
 
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
 ## Reference
 
