@@ -10,7 +10,7 @@ The script for Bayesian force inference can be found [here](https://github.com/I
 
 Using a input file that contains the information about detected vertices, edges, cells, and coordinates of cell vertices from an image of epithelial tissue, 
 one can use the scripts to perform image-based parameter inference with "ParameterEstimation.py". 
-(The input file can be derived using the GetVertex plugin in ImageJ/Fiji; for details on this plugin, see https://github.com/Sugimuralab/GetVertexPlugin.)
+
 
 ## Requirement
 
