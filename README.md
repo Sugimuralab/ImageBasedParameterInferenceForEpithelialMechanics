@@ -4,12 +4,12 @@ Parameter estimation and model selection for epithelial mechanics
 ## Description
 
 Image-basde parameter inference has been reported in Ogita et al. 2022 [1]. It estimates parameters of the Cell Vertex Model (CVM) and selects the most predictive model among tested from image data of epithelial tissue.
-See Ogita et al. 2022[1] for details.
+See Ogita et al. 2022 [1] for details.
 
 The script for Bayesian force inference can be found [here](https://github.com/IshiharaLab/BayesianForceInference).
 
-Using a input file that contains the information about detected vertices, edges, cells, and coordinates of cell vertices from an image of epithelial tissue, 
-one can use the scripts to perform image-based parameter inference with "ParameterEstimation.py". 
+Using a input file that contains the information about the position and connectivity of cell vertices from an image of epithelial tissue, 
+the scripts can be used to perform image-based parameter inference with "ParameterEstimation.py". 
 
 
 ## Requirement
