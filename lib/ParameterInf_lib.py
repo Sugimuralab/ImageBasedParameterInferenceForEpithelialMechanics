@@ -9,9 +9,10 @@ def GetInsiceVEC(edge,cell,V_NUM,CELL_NUMBER,E_NUM,INV_NUM,Rnd):
     Designate cell vertices, cell junctions, cells used (V_in, E_in, C_in) and
     and not used (RndV, RndE, RndC) for parameter estimation
     """
-    RndV = np.array(Rnd[0],np.int)
-    RndE = np.array(Rnd[1],np.int)
-    RndC = np.array(Rnd[2],np.int)
+    
+    RndV = np.array(Rnd[0],int)
+    RndE = np.array(Rnd[1],int)
+    RndC = np.array(Rnd[2],int)
     V_NUM = INV_NUM + len(RndV)        
     
     #Cin : Cells inside tissue
@@ -30,14 +31,14 @@ def GetInsiceVEC(edge,cell,V_NUM,CELL_NUMBER,E_NUM,INV_NUM,Rnd):
     RndE = set(RndE)
     E_in = set(range(E_NUM)) - RndE
     #Convert set to np.array
-    V_in = np.array(list(V_in),np.int)
-    RndV = np.array(list(RndV),np.int)
+    V_in = np.array(list(V_in),int)
+    RndV = np.array(list(RndV),int)
     if (len(V_in)+len(RndV) != V_NUM):
         print("V_in : %d + RndJ : %d != V_NUM %d, inconsistent!" %(len(V_in),len(RndV),V_NUM))
-    E_in = np.array(list(E_in),np.int)
-    RndE = np.array(list(RndE),np.int)
-    C_in = np.array(list(C_in),np.int)
-    RndC = np.array(list(RndC),np.int)
+    E_in = np.array(list(E_in),int)
+    RndE = np.array(list(RndE),int)
+    C_in = np.array(list(C_in),int)
+    RndC = np.array(list(RndC),int)
     return [V_in, E_in, C_in, RndV, RndE, RndC]
 
 def CalcMatrixC(x,y,edge,cell,E_NUM,CELL_NUMBER,R_NUM,INV_NUM,Rnd,ERR_MAX,SPARSE = False,E_ex = []):
@@ -47,9 +48,9 @@ def CalcMatrixC(x,y,edge,cell,E_NUM,CELL_NUMBER,R_NUM,INV_NUM,Rnd,ERR_MAX,SPARSE
     
     """
     print('...    Calculate Coefficeint Matrix        ')
-    RndJ = np.array(Rnd[0],np.int)
-    RndE = np.array(Rnd[1],np.int)
-    RndC = np.array(Rnd[2],np.int)
+    RndJ = np.array(Rnd[0],int)
+    RndE = np.array(Rnd[1],int)
+    RndC = np.array(Rnd[2],int)
     V_NUM = INV_NUM + len(RndJ)        
     
     #Cin : Cells inside tissue
@@ -76,14 +77,14 @@ def CalcMatrixC(x,y,edge,cell,E_NUM,CELL_NUMBER,R_NUM,INV_NUM,Rnd,ERR_MAX,SPARSE
     RndE = set(RndE)
     E_in = set(range(E_NUM)) - RndE
     #Convert set to np.array
-    V_in = np.array(list(V_in),np.int)
-    RndJ = np.array(list(RndJ),np.int)
+    V_in = np.array(list(V_in),int)
+    RndJ = np.array(list(RndJ),int)
     if (len(V_in)+len(RndJ) != V_NUM):
         print("V_in : %d + RndJ : %d != V_NUM %d, inconsistent!" %(len(V_in),len(RndJ),V_NUM))
-    E_in = np.array(list(E_in),np.int)
-    RndE = np.array(list(RndE),np.int)
-    C_in = np.array(list(C_in),np.int)
-    RndC = np.array(list(RndC),np.int)
+    E_in = np.array(list(E_in),int)
+    RndE = np.array(list(RndE),int)
+    C_in = np.array(list(C_in),int)
+    RndC = np.array(list(RndC),int)
     #From Here : Same as GetMatrix_ForceEstimation
     INV_NUM = V_NUM - len(RndJ)
     C_NUM = 2*(INV_NUM);       # 条件数
@@ -153,7 +154,7 @@ def CalcMatrixC(x,y,edge,cell,E_NUM,CELL_NUMBER,R_NUM,INV_NUM,Rnd,ERR_MAX,SPARSE
     
     ###    Check the validity of Matrix MM
     #RndE2 : edges only one of whose vertices are V_in
-    RndE2 = np.empty(0,np.int)
+    RndE2 = np.empty(0,int)
     for i in E_in:
         if edge[i].junc1 in RndJ:
             RndE2 = np.append(RndE2,i)
