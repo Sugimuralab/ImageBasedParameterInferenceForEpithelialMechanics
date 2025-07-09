@@ -58,7 +58,6 @@ def calc_L(l,theta,A):
 
 #%% list of candidate models
 Models = ["A", "B", "C", "D", "E"]
-Models = ["A"]
 Model2SubjComb = {"A": [0,1,2,3,4,5],
                   "B": [0,1,2,5],
                   "C": [0,1,5],
