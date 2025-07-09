@@ -61,7 +61,7 @@ def OutlierDetector(ListWOutlier,maximum_mag):
     print("Upper Outleir: {}".format(sum(Upper)))
     return  np.where( Upper  )
 
-def Preprocessing(Data,ExcludeOutlier, ExcludeShortEdge, AreaNormalization):
+def Preprocessing(Data,ExcludeOutlier, ExcludeShortEdge, AreaNormalization, lmin=3, area_threshold_factor=2):
     """
     前処理を行う：短い細胞接着面の除外・大きい細胞の除外・空間スケールの変換
     Preprocess the input data: exlude short junctions and large cells, rescale the spatial scale
@@ -71,12 +71,11 @@ def Preprocessing(Data,ExcludeOutlier, ExcludeShortEdge, AreaNormalization):
 
 
     if ExcludeShortEdge:
-        lmin = 3
         short_edges = [i for i in E_in if edge[i].dist <lmin]
         E_ex = short_edges
 
     if ExcludeOutlier:
-        OutlierC_in = OutlierDetector([cell[i].area for i in C_in], 2)
+        OutlierC_in = OutlierDetector([cell[i].area for i in C_in], area_threshold_factor)
         OutlierVertices = list({ji for ci in C_in[OutlierC_in] for ji in cell[ci].junc} )
         OutlierV_in = np.where([(ji in OutlierVertices) for ji in V_in])[0]
         RndV = np.append(RndV,OutlierV_in)
