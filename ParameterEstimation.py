@@ -40,7 +40,7 @@ SampleName = filename.split(os.sep)[-3]
 ExcludeOutlier = True
 ExcludeShortEdge = True
 AreaNormalization = True
-lmin = 3 #If you apply this method to simulation data, you should tune this (equal or little more than the shlethold length for celel rearrangement is fine?)
+lmin = 3 #If you apply this method to simulation data, you should tune this. (Equal or little bit more than the threshold length for cell rearrangement is fine?)
 area_threshold_factor = 2
 
 #%% construct mechanical model as a matrix
