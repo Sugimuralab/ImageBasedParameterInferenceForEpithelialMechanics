@@ -40,6 +40,8 @@ SampleName = filename.split(os.sep)[-3]
 ExcludeOutlier = True
 ExcludeShortEdge = True
 AreaNormalization = True
+lmin = 3 #If you apply this method to simulation data, you should tune this (equal or little more than the shlethold length for celel rearrangement is fine?)
+area_threshold_factor = 2
 
 #%% construct mechanical model as a matrix
 ParameterNames = ["a0","a1","a2","b0","b1","b2","k"]
@@ -68,7 +70,7 @@ Data = LD.loaddata( filename )
 
 #%% preprocessing
 [x,y,edge,cell,Rnd,CELL_NUMBER,E_NUM,V_NUM,INV_NUM,R_NUM,stl,title,E_ex] = \
-    PP.Preprocessing(Data, ExcludeOutlier, ExcludeShortEdge, AreaNormalization)
+    PP.Preprocessing(Data, ExcludeOutlier, ExcludeShortEdge, AreaNormalization,lmin,)
 
 #%% diplay tisse geometry
 LD.DrawCells(x, y, edge, cell,OutputSample)
