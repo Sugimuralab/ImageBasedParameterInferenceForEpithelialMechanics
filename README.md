@@ -21,7 +21,7 @@ the scripts can be used to perform image-based parameter inference with "Paramet
 
 1. Prepare an input file in the same format as the attached sample (Sample/sample/).
 2. Change the variable "filename" in ParameterEstimation.py to the input file in step 1.
-<br>(If you apply this method to artificial data, you should adjust the lmin parameter.)
+<br>When applying this method to artificial data, the lmin parameter must be adjusted.
 3. Run ParameterEstimation.py on IDE or IPython.
 
 
